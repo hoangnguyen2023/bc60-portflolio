@@ -1,0 +1,165 @@
+/* global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'Hind', sans-serif;
+
+
+}
+#navbarPortfolio .nav-item .nav-link{
+    color: white;
+    transition: all 0.5s;
+}
+#navbarPortfolio .nav-item:hover .nav-link{
+    color: #35A22c;
+
+}
+#navbarPortfolio .nav-item::after{
+    content: "";
+    background-color: #35A22c !important;
+    width: 0;
+    height: 2px;
+    display: block;
+    transition: all 0.5s;
+}
+#navbarPortfolio .nav-item:hover::after{
+    width: 100%;
+}
+header{
+    position: absolute;
+    z-index: 12;
+    width: 100%;
+}
+/* carousel  */
+.carouselPort .carousel-item{
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.carouselPort .carousel-item:nth-child(1){
+    background-image: url('../img/mountains.jpg');
+    
+}
+.carouselPort .carousel-item:nth-child(2){
+    background-image: url('../img/mountains-1.jpg');
+    
+}
+.carouselPort .carousel-item:nth-child(3){
+    background-image: url('../img/finland.jpg');
+ 
+}
+.carouselPort .img__thumb{
+    width: 150px;
+    margin: 0 auto;
+}
+.carouselPort .img__thumb img{
+    border-radius: 50%;
+}
+.carousel-caption {
+    /* background-color: red; */
+    transform: translateY(-80%);
+}
+.animate__animated{
+
+}
+.animate__fadeInUp{
+    animation-name: fadeInup;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes fadeInup{
+    0%{
+        opacity: 0;
+        transform: translate3d(0,100,0);
+    }
+    100%{
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+/* .carousel-caption{
+   animation-name: arrowdown;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   transition: all 0.5s;
+} */
+/* @keyframes arrowdown{
+    from{
+        transform: translateY(-20%);
+        opacity: 1;
+        transition: all 0.5s;
+    }
+    to{
+        transform: translateY(-80%);
+        opacity: 1;
+        transition: all 0.5s;
+    }
+} */
+.carousel-item-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(39,43,54,.5);
+    overflow: auto;
+}
+
+@media screen and (max-width:576px) {
+    .project__content .row .card-body .card-title{
+        font-size: 1rem;
+    }
+    
+}
+.nav{
+    justify-content: center;
+   
+}
+/* css project  */
+.project__content .nav-item a.nav-link{
+    border: 1px solid  black;
+    color:black;
+}
+.project__content .nav li.nav-item{
+    margin: 0 20px;
+}
+.card{
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: none;
+    box-shadow: 0 0 0.2rem gray;
+    cursor: pointer;
+   
+}
+.tab-content .card .card-body{
+    border: 1px solid transparent;
+    text-align: center;
+    border-radius: 0 0 1rem 1rem;
+    transition: all 0.5s;
+}
+.tab-content .card .card-body h4 {
+font-size: 1.2rem;
+
+}
+.tab-content .card:hover .card-body{ 
+   border-color: #35A22c;
+   border-top-color:transparent;
+}
+.tab-content .card:hover .card-body h4{
+    color: #35A22c;
+}
+.tab-content .card:hover .card-body p{
+    color: #35A22c;
+}
+@media screen and (max-width:767px) {
+    .project__content .nav-item a.nav-link {
+        padding: 0 5px;
+    }
+    
+}
+
+
+
+
